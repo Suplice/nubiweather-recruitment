@@ -20,7 +20,7 @@ export const fetchForecastWeatherData = async (
   });
 
   const response = await fetch(
-    `${EXPRESS_API_URL}/forecast-weather${searchParams}`,
+    `${EXPRESS_API_URL}/forecast-weather?${searchParams}`,
     {
       method: "GET",
     }
@@ -49,7 +49,7 @@ export const fetchCurrentWeatherData = async (
   });
 
   const response = await fetch(
-    `${EXPRESS_API_URL}/realtime-weather${searchParams}`,
+    `${EXPRESS_API_URL}/realtime-weather?${searchParams}`,
     {
       method: "GET",
     }
