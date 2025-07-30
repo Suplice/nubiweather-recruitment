@@ -1,28 +1,32 @@
-# Backend
-## Express
-## NestJS
-## Spring Boot + Java
-## Spring Boot + Kotlin
+# Backend – Nubisoft Weather App
 
-In this directory you'll find backend starters for the application. You can choose any technology you like, but we've provided couple of starters in different technologies to help get you up and running.
+Aplikacja backendowa odpowiedzialna za pobieranie danych pogodowych z zewnętrznego API oraz ich udostępnianie w formacie JSON dla aplikacji frontendowej.
 
-## What we expect from you?
+## Funkcjonalności
 
-Build simple API that uses https://www.weatherapi.com/ to show current weather in 2 cities: Gliwice and Hamburg. The application can be built using any technology you like. 
-You should expose at least 2 endpoints:
-1. `/realtime-weather` - should return current weather in Gliwice and Hamburg
-2. `/forecast-weather` - should return forecast for next days in Gliwice and Hamburg
-   
-Those are basic requirements, but feel free to add more features if you like, however don't spend too much time on it - max 8 hours.
+- Pobieranie aktualnej pogody w Gliwicach i Hamburgu
+- Pobieranie prognozy pogody na kolejne dni dla obu miast
+- Udostępnianie danych w formacie JSON poprzez REST API
 
-## Guidelines for backend:
+Aplikacja korzysta z zewnętrznego serwisu pogodowego [https://www.weatherapi.com/](https://www.weatherapi.com/) i udostępnia dane pod dwoma endpointami:
 
-1. Clean and readable code (don't get too fancy, we're looking for clean and readable code)
-2. Usage of modern backend technologies
-3. Usage of best practices (we want to see how you structure your code)
-4. Usage of version control system (git)
-5. Usage of provided API (we want to see how you use it)
-6. Saving data in runtime or `optionally` in preferred database (we want to see how you handle data)
-7. Instructions on how to run the application (we want to see your application in action)
-8. Readme with basic information about the application and features you've implemented
-+ 9. Bonus points for testing
+- `GET /api/realtime-weather` – zwraca aktualną pogodę dla Gliwic i Hamburga
+- `GET /api/forecast-weather` – zwraca prognozę pogody na nadchodzące dni
+
+## Uruchomienie aplikacji
+
+Aby uruchomić backend lokalnie, należy wykonać poniższe polecenia:
+
+`cd backend/expressjs`
+
+`npm install`
+
+`npm run dev`
+
+Domyślnie backend będzie dostępny pod adresem 
+
+`http://localhost:5000`
+
+Backend można również uruchomić jako część całego systemu (frontend + backend) za pomocą Dockera, wykonując w katalogu głównym projektu:
+
+`docker-compose up --build`
